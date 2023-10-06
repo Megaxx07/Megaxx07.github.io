@@ -172,8 +172,8 @@
   margin: auto;
 }
 .radio-skin,
-.radio-skin--Internship,
 .radio-skin--Research,
+.radio-skin--Internship,
 .radio-skin--Education {
   height: 100%;
   width: 2px;
@@ -182,8 +182,8 @@
   transition: all 0.4s ease;
 }
 .radio-skin::after,
-.radio-skin--Internship::after,
 .radio-skin--Research::after,
+.radio-skin--Internship::after,
 .radio-skin--Education::after {
   transition: all 0.4s ease;
   display: block;
@@ -199,22 +199,22 @@
   top: 22px;
   box-shadow: 1px 0 5px rgba(0,0,0,0.2);
 }
-.radio-skin--Internship::after {
+.radio-skin--Research::after {
   border-color: #ee936c;
 }
-#radio-Internship:checked+.radio-skin--Internship {
+#radio-Research:checked+.radio-skin--Research {
   background-color: #ee936c;
 }
-#radio-Internship:checked+.radio-skin--Internship::after {
+#radio-Research:checked+.radio-skin--Research::after {
   background-color: #ee936c;
   top: -2px;
 }
-.timeline-item-Internship .line-anchor::after,
-.timeline-item-Internship--hidden .line-anchor::after {
+.timeline-item-Research .line-anchor::after,
+.timeline-item-Research--hidden .line-anchor::after {
   background-color: #ee936c;
 }
-.timeline-item-Internship .line-date-tag,
-.timeline-item-Internship--hidden .line-date-tag {
+.timeline-item-Research .line-date-tag,
+.timeline-item-Research--hidden .line-date-tag {
   background-color: #ee936c;
 }
 /*
@@ -222,22 +222,22 @@
     font-weight: bold;
   }
   */
-.radio-skin--Research::after {
+.radio-skin--Internship::after {
   border-color: #60a465;
 }
-#radio-Research:checked+.radio-skin--Research {
+#radio-Internship:checked+.radio-skin--Internship {
   background-color: #60a465;
 }
-#radio-Research:checked+.radio-skin--Research::after {
+#radio-Internship:checked+.radio-skin--Internship::after {
   background-color: #60a465;
   top: -2px;
 }
-.timeline-item-Research .line-anchor::after,
-.timeline-item-Research--hidden .line-anchor::after {
+.timeline-item-Internship .line-anchor::after,
+.timeline-item-Internship--hidden .line-anchor::after {
   background-color: #60a465;
 }
-.timeline-item-Research .line-date-tag,
-.timeline-item-Research--hidden .line-date-tag {
+.timeline-item-Internship .line-date-tag,
+.timeline-item-Internship--hidden .line-date-tag {
   background-color: #60a465;
 }
 /*
