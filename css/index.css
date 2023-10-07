@@ -200,22 +200,22 @@
   box-shadow: 1px 0 5px rgba(0,0,0,0.2);
 }
 .radio-skin--Research::after {
-  border-color: #ee936c;
+  border-color: #fa9500;
 }
 #radio-Research:checked+.radio-skin--Research {
-  background-color: #ee936c;
+  background-color: #fa9500;
 }
 #radio-Research:checked+.radio-skin--Research::after {
-  background-color: #ee936c;
+  background-color: #fa9500;
   top: -2px;
 }
 .timeline-item-Research .line-anchor::after,
 .timeline-item-Research--hidden .line-anchor::after {
-  background-color: #ee936c;
+  background-color: #fa9500;
 }
 .timeline-item-Research .line-date-tag,
 .timeline-item-Research--hidden .line-date-tag {
-  background-color: #ee936c;
+  background-color: #fa9500;
 }
 /*
   .timeline-item-app, .timeline-item-event {
@@ -223,22 +223,22 @@
   }
   */
 .radio-skin--Internship::after {
-  border-color: #60a465;
+  border-color: #babd8d;
 }
 #radio-Internship:checked+.radio-skin--Internship {
-  background-color: #60a465;
+  background-color: #babd8d;
 }
 #radio-Internship:checked+.radio-skin--Internship::after {
-  background-color: #60a465;
+  background-color: #babd8d;
   top: -2px;
 }
 .timeline-item-Internship .line-anchor::after,
 .timeline-item-Internship--hidden .line-anchor::after {
-  background-color: #60a465;
+  background-color: #babd8d;
 }
 .timeline-item-Internship .line-date-tag,
 .timeline-item-Internship--hidden .line-date-tag {
-  background-color: #60a465;
+  background-color: #babd8d;
 }
 /*
   .timeline-item-app, .timeline-item-event {
@@ -246,22 +246,22 @@
   }
   */
 .radio-skin--Education::after {
-  border-color: #568dc4;
+  border-color: #7c6a0a;
 }
 #radio-Education:checked+.radio-skin--Education {
-  background-color: #568dc4;
+  background-color: #7c6a0a;
 }
 #radio-Education:checked+.radio-skin--Education::after {
-  background-color: #568dc4;
+  background-color: #7c6a0a;
   top: -2px;
 }
 .timeline-item-Education .line-anchor::after,
 .timeline-item-Education--hidden .line-anchor::after {
-  background-color: #568dc4;
+  background-color: #7c6a0a;
 }
 .timeline-item-Education .line-date-tag,
 .timeline-item-Education--hidden .line-date-tag {
-  background-color: #568dc4;
+  background-color: #7c6a0a;
 }
 /*
   .timeline-item-app, .timeline-item-event {
