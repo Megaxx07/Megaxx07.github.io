@@ -172,8 +172,8 @@
   margin: auto;
 }
 .radio-skin,
-.radio-skin--Research,
 .radio-skin--Internship,
+.radio-skin--Research,
 .radio-skin--Education {
   height: 100%;
   width: 2px;
@@ -182,8 +182,8 @@
   transition: all 0.4s ease;
 }
 .radio-skin::after,
-.radio-skin--Research::after,
 .radio-skin--Internship::after,
+.radio-skin--Research::after,
 .radio-skin--Education::after {
   transition: all 0.4s ease;
   display: block;
@@ -199,46 +199,46 @@
   top: 22px;
   box-shadow: 1px 0 5px rgba(0,0,0,0.2);
 }
-.radio-skin--Research::after {
-  border-color: #fa9500;
+.radio-skin--Internship::after {
+  border-color: #fed566;
 }
-#radio-Research:checked+.radio-skin--Research {
-  background-color: #fa9500;
+#radio-Internship:checked+.radio-skin--Internship {
+  background-color: #fed566;
 }
-#radio-Research:checked+.radio-skin--Research::after {
-  background-color: #fa9500;
+#radio-Internship:checked+.radio-skin--Internship::after {
+  background-color: #fed566;
   top: -2px;
 }
-.timeline-item-Research .line-anchor::after,
-.timeline-item-Research--hidden .line-anchor::after {
-  background-color: #fa9500;
+.timeline-item-Internship .line-anchor::after,
+.timeline-item-Internship--hidden .line-anchor::after {
+  background-color: #fed566;
 }
-.timeline-item-Research .line-date-tag,
-.timeline-item-Research--hidden .line-date-tag {
-  background-color: #fa9500;
+.timeline-item-Internship .line-date-tag,
+.timeline-item-Internship--hidden .line-date-tag {
+  background-color: #fed566;
 }
 /*
   .timeline-item-app, .timeline-item-event {
     font-weight: bold;
   }
   */
-.radio-skin--Internship::after {
-  border-color: #babd8d;
+.radio-skin--Research::after {
+  border-color: #8ea05d;
 }
-#radio-Internship:checked+.radio-skin--Internship {
-  background-color: #babd8d;
+#radio-Research:checked+.radio-skin--Research {
+  background-color: #8ea05d;
 }
-#radio-Internship:checked+.radio-skin--Internship::after {
-  background-color: #babd8d;
+#radio-Research:checked+.radio-skin--Research::after {
+  background-color: #8ea05d;
   top: -2px;
 }
-.timeline-item-Internship .line-anchor::after,
-.timeline-item-Internship--hidden .line-anchor::after {
-  background-color: #babd8d;
+.timeline-item-Research .line-anchor::after,
+.timeline-item-Research--hidden .line-anchor::after {
+  background-color: #8ea05d;
 }
-.timeline-item-Internship .line-date-tag,
-.timeline-item-Internship--hidden .line-date-tag {
-  background-color: #babd8d;
+.timeline-item-Research .line-date-tag,
+.timeline-item-Research--hidden .line-date-tag {
+  background-color: #8ea05d;
 }
 /*
   .timeline-item-app, .timeline-item-event {
@@ -246,22 +246,22 @@
   }
   */
 .radio-skin--Education::after {
-  border-color: #7c6a0a;
+  border-color: #3d4b58;
 }
 #radio-Education:checked+.radio-skin--Education {
-  background-color: #7c6a0a;
+  background-color: #3d4b58;
 }
 #radio-Education:checked+.radio-skin--Education::after {
-  background-color: #7c6a0a;
+  background-color: #3d4b58;
   top: -2px;
 }
 .timeline-item-Education .line-anchor::after,
 .timeline-item-Education--hidden .line-anchor::after {
-  background-color: #7c6a0a;
+  background-color: #3d4b58;
 }
 .timeline-item-Education .line-date-tag,
 .timeline-item-Education--hidden .line-date-tag {
-  background-color: #7c6a0a;
+  background-color: #3d4b58;
 }
 /*
   .timeline-item-app, .timeline-item-event {
