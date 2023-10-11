@@ -5,7 +5,7 @@
     <meta name="viewport" content="initial-scale=1.0, width=device-width"/>
     <title>
       
-        The Impact of Index Investing on the Price of Agricultural Commodities (Published) | MEGAXX
+        Research on Credit Risk of Listed Companies Based on GRBF and KMV Model | MEGAXX
       
     </title>
     <meta name="description" content="This themes forked from hoozen and other elements built by myself"/>
@@ -70,13 +70,13 @@
   <article class="post-content">
     <div class="post-inner">
       <div class="post-content__head">
-        <div class="post-title">The Impact of Index Investing on the Price of Agricultural Commodities (Published)</div>
+        <div class="post-title">Research on Credit Risk of Listed Companies Based on GRBF and KMV Model</div>
         <div class="post-info">
           
   <a href="/tags/Research/" class="post-tag">#Research</a>
 
 
-          <span class="post-date">2018-09-12</span>
+          <span class="post-date">2020-09-10</span>
         </div>
       </div>
       
@@ -86,7 +86,21 @@
             
           </div>
         
-        <p>Advisor: Professor Gu Guangtong (ZAFU)<br>09&#x2F;2018 – 10&#x2F;2019<br>• Team leader.<br>• This project mainly focused on researching the impact of index investing on the price volatility of agricultural commodities.<br>• Extracted the daily and monthly frequencies of the price indices of corn, soybean, and cotton in China from June 2006 to August 2018, as well as the corresponding SSE price indices data.<br>• The data were first undergone by descriptive statistics, and then missing values were supplemented using interpolation. Utilized the plot package in R to visualize the trends of each return of commodities and index.<br>• Unit root test, VAR model, cointegration test, impulse response function analysis, and variance decomposition are used for empirical analysis.<br>• The volatility of each futures price index is observed by a shock to the SSE index after an impulse. The relationship between the SSE index and three types of agricultural products is tested using the Granger causality test.<br>• Leveraged the DCC-MIDAS mixing model to deeply study the linkage between commodity indexing investment and the price volatility of bulk agricultural products. In the GARCH-MIDAS model based on realized volatility where it is utilized, the volatility is decomposed into a long-term component and a short-term component and regressed separately.<br>•  Results: corn price fluctuations receive the highest volatility from an impulse to the SSE index, while soybeans and cotton receive the same level of shocks not so obviously as corn. There is Granger causality between the price returns of SSE and soybeans, and the SSE has the longest impact on the price of cotton.</p>
+        <p>Advisor: Professor Gu Guangtong (ZAFU)<br>09&#x2F;2020 – 06&#x2F;2021</p>
+<p>Completed this project independently. Furthermore, the integration of neural networks and risk assessment models with the KMV model in this project is an area that few have ventured into from 2020 to 2021.</p>
+<p>Initially, my motivation for exploring this combined model was to effectively evaluate a company’s risk of default and to filter through numerous stocks for portfolio construction. This stemmed from my active involvement in the Chinese stock market and a deep interest in automated processes. Prolonged monitoring of the market can lead to inaccurate judgments, therefore, I aspired to introduce a neural network model to provide rational analysis and guidance for assessing a company’s risk of default.</p>
+<p>Utilized a combination model consisting of the Generalized Radial Basis Function Neural Network (GRBFNN) and the credit risk evaluation model KMV. Its primary objective was to assess the credit default risk of 50 publicly listed companies in the Chinese stock market and recommend modeling enhancement.</p>
+<p>In the context of the Chinese stock market, randomly selected 50 publicly listed companies from each rating level. Obtained their 2020 annual financial report as well as stock price data from April 2020 to March 2021. Subsequently, data cleaning was conducted, and the dataset was divided into a training set and a test set with a ratio of 1:4.</p>
+<p>Ten essential financial indicators were selected from 36 basic financial metrics using a factor analysis model, and their factor scores were computed. After analyzing scree plots and variance explained by the factors, the number of common factors explanatory variables was determined to be two.</p>
+<p><img src="/2020/09/10/Re03/R0301.png"></p>
+<p>Factor loading matrices were then calculated, and principal component analysis (PCA) was applied to identify two primary factors: one related to solvency and the other to profitability.</p>
+<p><img src="/2020/09/10/Re03/R0302.png"></p>
+<p>In the modeling phase, fine-tuned the GRBFNN model, adjusting the number of hidden layers, input layers, and output layers. The test set data was input to the model for debugging, and model performance was assessed using loss functions and difference surface plots to detect signs of overfitting or under-fitting. Subsequently, the training set data was fed into the GRBFNN model, with input layers including common factors and factor scores, and output layers encompassing asset value and volatility.</p>
+<p><img src="/2020/09/10/Re03/R0303.png"></p>
+<p><img src="/2020/09/10/Re03/R0304.png"></p>
+<p>Finally, the KMV model to compute default probabilities and default distances for all publicly listed companies in the training set, which were then compared with market-released credit ratings. The average accuracy of the test set reached 74.46%. It is noteworthy that companies with higher credit ratings exhibited relatively lower accuracy.</p>
+<p><img src="/2020/09/10/Re03/R0305.jpg"></p>
+<p>In conclusion, this independently executed combined model can reasonably assess the risk of default for publicly listed companies. Given that this model was developed when neural network models were not widely popular, it still holds considerable potential for further advancement.</p>
 
       </div>
     </div>
@@ -95,7 +109,7 @@
     
     <div class="post-nav">
   
-    <a class="post-nav-item-left" href="/2019/01/01/Research02/">
+    <a class="post-nav-item-left" href="/2020/09/22/Project02/">
       <div class="text-align">
         <svg t="1670570876164"
              class="icon"
@@ -106,12 +120,12 @@
         </svg>
         <span class="text-small">Previous</span>
       </div>
-      <div>Difference Study on Risks of Agricultural Commodities under Sino-US Trade Conflicts</div>
+      <div>Research the Dynamic Correlation between Gold Futures and Spot Price under COVID-19</div>
     </a>
   
   <div class="vhr"></div>
   
-    <a class="post-nav-item-right" href="/2018/01/19/WE05/">
+    <a class="post-nav-item-right" href="/2020/06/29/WE04/">
       <div class="text-align">
         <span class="text-small">Next</span>
         <svg t="1670570876164"
@@ -123,7 +137,7 @@
           <path d="M384 512L731.733333 202.666667c17.066667-14.933333 19.2-42.666667 4.266667-59.733334-14.933333-17.066667-42.666667-19.2-59.733333-4.266666l-384 341.333333c-10.666667 8.533333-14.933333 19.2-14.933334 32s4.266667 23.466667 14.933334 32l384 341.333333c8.533333 6.4 19.2 10.666667 27.733333 10.666667 12.8 0 23.466667-4.266667 32-14.933333 14.933333-17.066667 14.933333-44.8-4.266667-59.733334L384 512z" p-id="14596"/>
         </svg>
       </div>
-      Quantitative Researcher
+      Quantitative Analyst Intern
     </a>
   
 </div>
@@ -136,7 +150,7 @@
 </div>
   <div class="realated__body">
     
-      <div class="null"><div class="null-item"><div class="null-title"><a href="/2019/01/01/Research02/" title="Difference Study on Risks of Agricultural Commodities under Sino-US Trade Conflicts" rel="bookmark">Difference Study on Risks of Agricultural Commodities under Sino-US Trade Conflicts</a></div></div><div class="null-item"><div class="null-title"><a href="/2020/09/10/Research03/" title="Research on Credit Risk of Listed Companies Based on GRBF and KMV Model" rel="bookmark">Research on Credit Risk of Listed Companies Based on GRBF and KMV Model</a></div></div><div class="null-item"><div class="null-title"><a href="/2022/02/14/Research04/" title="Assessing Seismic Risk and Financial Distress in the Bay Area Hospital System" rel="bookmark">Assessing Seismic Risk and Financial Distress in the Bay Area Hospital System</a></div></div><div class="null-item"><div class="null-title"><a href="/2019/09/07/Project01/" title="Quantitative Analysis of the Carbon Finance market in China" rel="bookmark">Quantitative Analysis of the Carbon Finance market in China</a></div></div><div class="null-item"><div class="null-title"><a href="/2020/09/22/Project02/" title="Research the Dynamic Correlation between Gold Futures and Spot Price under COVID-19" rel="bookmark">Research the Dynamic Correlation between Gold Futures and Spot Price under COVID-19</a></div></div></div>
+      <div class="null"><div class="null-item"><div class="null-title"><a href="/2018/09/12/Re01/" title="The Impact of Index Investing on the Price of Agricultural Commodities (Published)" rel="bookmark">The Impact of Index Investing on the Price of Agricultural Commodities (Published)</a></div></div><div class="null-item"><div class="null-title"><a href="/2019/01/01/Research02/" title="Difference Study on Risks of Agricultural Commodities under Sino-US Trade Conflicts" rel="bookmark">Difference Study on Risks of Agricultural Commodities under Sino-US Trade Conflicts</a></div></div><div class="null-item"><div class="null-title"><a href="/2022/02/14/Research04/" title="Assessing Seismic Risk and Financial Distress in the Bay Area Hospital System" rel="bookmark">Assessing Seismic Risk and Financial Distress in the Bay Area Hospital System</a></div></div><div class="null-item"><div class="null-title"><a href="/2019/09/07/Project01/" title="Quantitative Analysis of the Carbon Finance market in China" rel="bookmark">Quantitative Analysis of the Carbon Finance market in China</a></div></div><div class="null-item"><div class="null-title"><a href="/2020/09/22/Project02/" title="Research the Dynamic Correlation between Gold Futures and Spot Price under COVID-19" rel="bookmark">Research the Dynamic Correlation between Gold Futures and Spot Price under COVID-19</a></div></div></div>
     
   </div>
 </div>
