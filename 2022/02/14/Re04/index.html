@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf8"/>
+    <meta name="viewport" content="initial-scale=1.0, width=device-width"/>
+    <title>
+      
+        Assessing Seismic Risk and Financial Distress in the Bay Area Hospital System | MEGAXX
+      
+    </title>
+    <meta name="description" content="This themes forked from hoozen and other elements built by myself"/>
+    <meta name="keywords" content=""/>
+    
+      <link rel="apple-touch-icon"
+            sizes="180x180"
+            href="/images/apple-touch-icon.png"/>
+    
+    
+      <link rel="icon"
+            type="image/png"
+            sizes="32x32"
+            href="/images/favicon-32x32.png"/>
+    
+    
+      <link rel="icon"
+            type="image/png"
+            sizes="16x16"
+            href="/images/favicon-16x16.png"/>
+    
+    
+      <link rel="mask-icon"
+            href="/images/favicon.ico"
+            color=""/>
+    
+    
+    
+    <link rel="stylesheet"
+          type="text/css"
+          href='/css/layout.css'/>
+    
+    
+  <link rel="stylesheet" type="text/css" href="/css/post.css" />
+  
+
+  <meta name="generator" content="Hexo 6.3.0"></head>
+  <body>
+    <div class="head">
+      <div class="nav">
+        <a href='/' class="nav-logo">
+          <img alt="logo" height="60px" width="60px" src="/images/logo_v2.png"/>
+        </a>
+        <input id="navBtn" type="checkbox"/>
+        <div class="nav-menu">
+          
+            
+              <a class="nav-menu-item" href="/base">Eduation</a>
+            
+              <a class="nav-menu-item" href="/feat">Research & Project</a>
+            
+              <a class="nav-menu-item" href="/Exp">Experience</a>
+            
+          
+          
+        </div>
+        <label class="nav-btn" for="navBtn"></label>
+      </div>
+    </div>
+    <div class="body">
+      
+  <article class="post-content">
+    <div class="post-inner">
+      <div class="post-content__head">
+        <div class="post-title">Assessing Seismic Risk and Financial Distress in the Bay Area Hospital System</div>
+        <div class="post-info">
+          
+  <a href="/tags/Research/" class="post-tag">#Research</a>
+
+
+          <span class="post-date">2022-02-14</span>
+        </div>
+      </div>
+      
+      <div class="post-content__body">
+        
+          <div class="post-gallery">
+            
+          </div>
+        
+        <p><strong>Abstract</strong></p>
+<p>The objective of this study is to inform decision-making with regard to Senate Bill (SB) 1953, primarily to understand the risk of each and every acute care hospital with regard to physical, financial and socio-economic vulnerabilities . Then understand the correlation between financial distress and the risk probability in case of an earthquake. Once these three vulnerabilities are quantitatively established, we will try to use these metrics to classify the hospitals and identify the extremely vulnerable hospitals that need financial assistance to complete retrofits.</p>
+<p>A specific area in California termed as Bay Area which is considered the technology capital of the world with a population of 7.75 million is selected as the study area. The vulnerabilities of the study area are measured through three distinct research avenues</p>
+<ol>
+<li>Analyzing the structural vulnerability of the hospital buildings in a selected earthquake scenario.</li>
+<li>Understanding the financial vulnerability of the hospital systems.</li>
+<li>Exploring the economic and racial vulnerabilities around the bay area.</li>
+</ol>
+<p>For the first stage, the study is expected to conduct an Mw 7.0 earthquake scenario simulation. The outcome of earthquake scenario models will be used to evaluate the spatial distribution of injuries and loss of functionality for assets. Combined with the result of financial analysis in stage two, the study will provide policy suggestions to enhance disaster preparedness for an effective response for hospitals in the Bay Area.</p>
+<p><strong>Data Collection</strong><br><img src="/2022/02/14/Re04/R0401.png"></p>
+<p><strong>Data Processing</strong></p>
+<p>The dataset required to conduct the structural impact analysis was not unavailable at a hospital level. The CHHS seismic open data was taken as the base layer and to spatialize the data the coordinates provided in the data was used. All buildings for the same hospitals’ name were given the same location leading to overlap of buildings and there were many structures like an entrance porch and connecting bridges with a separate building code. To tackle these challenges the data was manually processed to select only the main buildings and adjust the building points based on google hybrid maps background as base layer. Post this process we have spatial data with hospital names, building codes, and year of construction. To get the structure type of the building we used the building code of the hospital to search the online records submitted by hospitals for statutory records and scrape the structure type - few buildings have multiple structure types that were also scraped as a secondary structure type.</p>
+<p>The equipment data from the AHA was at a hospital level. Therefore, we interpolate it at the building level. We used the hospital name and extracted the building footprints from the Open Street maps using the CHHS data and calculated the footprint area and assumed area as the proxy of beds and other equipment that is shared within hospitals. A raster layer of soil was obtained from the database of OpenSHA. We georeferenced the raster and by using natural neighbor interpolation method to finally create the dataset required for structural damage analysis.</p>
+<p><strong>Methodology for Seismic Analysis</strong></p>
+<p>The methodology is divided into three stages: performing seismic hazard analysis in the San Francisco Bay Area, modeling hospital damage, and assessing the economic losses of hospital facilities due to seismic hazards.</p>
+<p><img src="/2022/02/14/Re04/R0402.png"></p>
+<p><strong>Methodology for Financial Analysis</strong></p>
+<p>In this part, we choose to use the Altman Z-score model to analyze the hospital’s financial distress according to the annual financial report.</p>
+<p>The Altman Z-score is a widely used and successful method for categorizing the financial health of an organization. The Altman Z score model was first used in 1968. At first, this is a discriminant analysis regression model of financial ratio variables used to predict corporate bankruptcies.</p>
+<p>Here we use this conventional model that is used to analyze the California hospital’s financial distress. We choose this regression model for its simplicity and explainability. The factors are defined as follows:</p>
+<p><img src="/2022/02/14/Re04/R0403.png"></p>
+<p>𝑥1 represents a liquidity ratio, which is important for a hospital’s usual operating expenses. This factor is calculated by current assets minus current liabilities and then divided by total assets.</p>
+<p>𝑥2 represents a measure of financial leverage. We use this factor to focus on the liability proportion of total assets. This factor is calculated by total assets minus total liabilities and then divided by total assets.</p>
+<p>𝑥3 is a measure of profitability and asset productivity. This factor is calculated by total revenue minus total expenses before taxes and then divided by total assets.</p>
+<p>𝑥4 is the book value of equity as a proportion of total liabilities.</p>
+<p>When we calculate all the factors for each hospital, we put them in our regression equation and get the final Z-score for each hospital. And according to the Altman Z-score model, we defined that when Z-score is less than 1.8, hospitals in this range are in serious financial distress, when Z-score is more than 3.0, hospitals in this range are in non-financial distress, and when Z-score between 1.8 and 3.0, hospitals in this range have potential financial distress. Langabeer et al. (2018) use 3.0 and 1.8 as Z thresholds, as applied to acute care hospitals. We use the same cutoffs in this analysis.</p>
+<p><strong>Results for Earthquake Analysis</strong></p>
+<p>In this section, we describe the results from our early data exploration and three parts of scenario modeling. The building dataset initially contains 1418 building blocks in the entire California state. After constraining their geolocation to stay within the Bay Area and removing deprecated data points, there are 87 hospital buildings left in our dataset. The majority of buildings are built after 1940, as shown in left figure. Building stocks vary from one-story clinics to tall comprehensive hospital facilities, as shown in right figure.</p>
+<p><img src="/2022/02/14/Re04/R0404.png"></p>
+<p>Using the mean PGA obtained from the SimCenter R2D HAZ tool and grid information, every building is assigned a ground-shaking measure based on its nearest grid, as shown in the following figure. The assigned PGA will be used as the intensity measurements to determine the damaged state of buildings under our given scenario.</p>
+<p><img src="/2022/02/14/Re04/R0405.png"></p>
+<p>On average, most buildings are not damaged. However, when we plot the probability distribution of damage states for every building in the following figure, some buildings have significantly higher seismic risk than the majority. Out of all 57 hospitals we considered, 29 hospitals have a higher possibility of severe damage. These hospitals are Alameda Hospital, Fairmont Hospital, Highland Hospital, etc. The result suggests that we could consider prioritizing the needs of these hospitals while allocating funds and resources to seismic upgrades.</p>
+<p><img src="/2022/02/14/Re04/R0406.jpg"></p>
+<p><strong>Results for Financial Analysis</strong></p>
+<p>From the below figure , we make a rank based on the Z-score from the lowest to the highest. 47% of hospitals in the Bay area are in non-financial distress, which is a good signal for this area and this is also positive for the construction legislation that hospitals have to comply with 17% of hospitals are in potential financial distress, this number is really small according to the whole percentage. 36% of hospitals are in serious financial distress.</p>
+<p><img src="/2022/02/14/Re04/R0407.png"></p>
+<p>As shown in the following table, financially-sustainable hospitals marked in the green box make up nearly 80% of the multi-hospital system. Under this situation, these hospitals have influential funds. Individual hospitals generate enough benefits to retrofit their buildings to meet the SB 1953 and will finally reach the highest ratings of NPC-5 and SPC-5.</p>
+<p><img src="/2022/02/14/Re04/R0408.png"></p>
+<p>Hospitals located in the yellow box with potential financial distress are not in the multi-hospital system. Compared to previous figure, this part occupied a small portion base on the whole dataset. Therefore, these out-of-multi-hospital system hospitals are using their own revenues to reconstruct their buildings to meet the policy. Their financial condition can be considered as the normal financial conditions in our report.</p>
+<p>Hospitals located in the red box in the table are in serious financial distress. Some hospitals are individual operation hospitals. However, other hospitals even in the large multi-hospital system are in serious financial distress, especially hospitals in the Alameda multi-hospital system. This phenomenon indicates that there is an unbalanced distribution of finance in the multi-hospital system since the Alameda Health System has both the best and worst financial condition hospitals.</p>
+<p>Also, we can plot the result on the map to have a better visualization, which can refer as follows.</p>
+<p><img src="/2022/02/14/Re04/R0409.png"></p>
+<p>In the map, we can see how financial disadvantages disproportionately spread out in the Bay Area: hospitals in non-financial distress in red are located at the edge of the land. Some hospitals are in serious financial distress in yellow and potential financial distress hospitals in orange are located far away from the coast. The seismic risk spread disproportionally by geography and financial status: Some hospitals with serious financial distress are facing a higher seismic risk.</p>
+<p><img src="/2022/02/14/Re04/R0410.png"></p>
+<p><img src="/2022/02/14/Re04/R0411.png"></p>
+<p>From above two figures, we have four clusters by using the K-means clustering method to have a view of the building’s cluster distribution in the Bay area. From the result, we got two significant clusters: cluster two and cluster dour. Cluster two represents there are some buildings with a high probability of complete damage and they also have serious financial distress. Cluster two shows us that these hospitals need more money to retrofit facilities and support their operations. Cluster four represents buildings that have a probability of being completely damaged but are not in a financial distress position. These buildings have stronger financial support to retrofit their facilities. This means the average condition of hospitals in the Bay area suggests positive information for us based on the legislation they have to comply with.</p>
+
+      </div>
+    </div>
+  </article>
+  <div class="post__foot">
+    
+    <div class="post-nav">
+  
+    <a class="post-nav-item-left" href="/2022/06/05/WE02/">
+      <div class="text-align">
+        <svg t="1670570876164"
+             class="icon"
+             viewBox="0 0 1024 1024"
+             width="16"
+             height="16">
+          <path d="M384 512L731.733333 202.666667c17.066667-14.933333 19.2-42.666667 4.266667-59.733334-14.933333-17.066667-42.666667-19.2-59.733333-4.266666l-384 341.333333c-10.666667 8.533333-14.933333 19.2-14.933334 32s4.266667 23.466667 14.933334 32l384 341.333333c8.533333 6.4 19.2 10.666667 27.733333 10.666667 12.8 0 23.466667-4.266667 32-14.933333 14.933333-17.066667 14.933333-44.8-4.266667-59.733334L384 512z" p-id="14596"/>
+        </svg>
+        <span class="text-small">Previous</span>
+      </div>
+      <div>Business Development, Strategy & Finance</div>
+    </a>
+  
+  <div class="vhr"></div>
+  
+    <a class="post-nav-item-right" href="/2021/11/01/Project03/">
+      <div class="text-align">
+        <span class="text-small">Next</span>
+        <svg t="1670570876164"
+             class="icon"
+             viewBox="0 0 1024 1024"
+             transform="scale(-1,-1)"
+             width="16"
+             height="16">
+          <path d="M384 512L731.733333 202.666667c17.066667-14.933333 19.2-42.666667 4.266667-59.733334-14.933333-17.066667-42.666667-19.2-59.733333-4.266666l-384 341.333333c-10.666667 8.533333-14.933333 19.2-14.933334 32s4.266667 23.466667 14.933334 32l384 341.333333c8.533333 6.4 19.2 10.666667 27.733333 10.666667 12.8 0 23.466667-4.266667 32-14.933333 14.933333-17.066667 14.933333-44.8-4.266667-59.733334L384 512z" p-id="14596"/>
+        </svg>
+      </div>
+      Performance Analysis of Six Trading Strategies in the Chip Industry
+    </a>
+  
+</div>
+
+    
+      <div class="related-post">
+  <div class="related__head">
+  <a href="/tags/Research/" class="post-tag">#Research</a>
+
+</div>
+  <div class="realated__body">
+    
+      <div class="null"><div class="null-item"><div class="null-title"><a href="/2018/09/12/Re01/" title="The Impact of Index Investing on the Price of Agricultural Commodities (Published)" rel="bookmark">The Impact of Index Investing on the Price of Agricultural Commodities (Published)</a></div></div><div class="null-item"><div class="null-title"><a href="/2019/01/01/Re02/" title="Difference Study on Risks of Agricultural Commodities under Sino-US Trade Conflicts (Published)" rel="bookmark">Difference Study on Risks of Agricultural Commodities under Sino-US Trade Conflicts (Published)</a></div></div><div class="null-item"><div class="null-title"><a href="/2020/09/10/Re03/" title="Research on Credit Risk of Listed Companies Based on GRBF and KMV Model" rel="bookmark">Research on Credit Risk of Listed Companies Based on GRBF and KMV Model</a></div></div><div class="null-item"><div class="null-title"><a href="/2019/09/07/Project01/" title="Quantitative Analysis of the Carbon Finance market in China" rel="bookmark">Quantitative Analysis of the Carbon Finance market in China</a></div></div><div class="null-item"><div class="null-title"><a href="/2020/09/22/Project02/" title="Research the Dynamic Correlation between Gold Futures and Spot Price under COVID-19" rel="bookmark">Research the Dynamic Correlation between Gold Futures and Spot Price under COVID-19</a></div></div></div>
+    
+  </div>
+</div>
+
+    
+    
+  </div>
+
+    </div>
+    <div class="foot">
+      <div class="foot-inner">
+        <div class="foot__head">
+          
+            <div class="foot-line">
+                <div class="text">Life is what you make of it.</div>
+            </div>
+          
+        </div>
+        <div class="foot__body">
+          
+          
+            <div class="foot-item">
+              <div class="foot-item__head">Social Accounts</div>
+              <div class="foot-item__body">
+                
+                  <div class="text">
+                    <img alt="link" height="20px" width="20px" src="/images/logo-github.svg"/>
+                    <a class="foot-link" target="_blank" rel="noopener" href="https://github.com/Megaxx07">Megaxx07</a>
+                  </div>
+                
+                  <div class="text">
+                    <img alt="link" height="20px" width="20px" src="/images/logo-linkedin.svg"/>
+                    <a class="foot-link" target="_blank" rel="noopener" href="https://www.linkedin.com/in/xinlu-xu-958934223/">LinkedIn</a>
+                  </div>
+                
+              </div>
+            </div>
+          
+          <div class="foot-item">
+            <div class="foot-item__head">Contact</div>
+            <div class="foot-item__body">
+              <div class="text">
+                <img alt="link" height="20px" width="20px" src="/images/icon/icon-email.svg"/>
+                <a class="foot-link" href="mailto:xx2208@nyu.edu">xx2208@nyu.edu</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="copyright">
+          <a href="http://example.com">MEGAXX</a> &nbsp; | Driven By&nbsp;<a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>&nbspand&nbsp;
+          <svg width="20" height="20" viewBox="0 0 725 725">
+            <path fill-rule="evenodd" fill="rgb(221, 221, 221)" d="M145.870,236.632 L396.955,103.578 L431.292,419.44 L156.600,522.53 L145.870,236.632 Z"/>
+            <path fill-rule="evenodd" fill="rgb(159, 159, 159)" d="M396.955,103.578 L564.345,234.486 L611.558,513.469 L431.292,419.44 L396.955,103.578 Z"/>
+            <path fill-rule="evenodd" fill="rgb(0, 0, 0)" d="M431.292,419.44 L611.558,513.469 L358.327,595.18 L156.600,522.53 L431.292,419.44 Z"/>
+          </svg>
+          <a target="_blank" rel="noopener" href="https://github.com/hooozen/hexo-theme-tranquility">hoozen</a>&nbsp;
+        </div>
+      </div>
+    </div>
+    
+    
+  
+
+  </body>
+</html>
