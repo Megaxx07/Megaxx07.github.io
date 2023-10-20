@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf8"/>
+    <meta name="viewport" content="initial-scale=1.0, width=device-width"/>
+    <title>
+      
+        Research the Dynamic Correlation between Gold Futures and Spot Price under COVID-19 | MEGAXX
+      
+    </title>
+    <meta name="description" content="This themes forked from hoozen and other elements built by myself"/>
+    <meta name="keywords" content=""/>
+    
+      <link rel="apple-touch-icon"
+            sizes="180x180"
+            href="/images/apple-touch-icon.png"/>
+    
+    
+      <link rel="icon"
+            type="image/png"
+            sizes="32x32"
+            href="/images/favicon-32x32.png"/>
+    
+    
+      <link rel="icon"
+            type="image/png"
+            sizes="16x16"
+            href="/images/favicon-16x16.png"/>
+    
+    
+      <link rel="mask-icon"
+            href="/images/favicon.ico"
+            color=""/>
+    
+    
+    
+    <link rel="stylesheet"
+          type="text/css"
+          href='/css/layout.css'/>
+    
+    
+  <link rel="stylesheet" type="text/css" href="/css/post.css" />
+  
+
+  <meta name="generator" content="Hexo 6.3.0"></head>
+  <body>
+    <div class="head">
+      <div class="nav">
+        <a href='/' class="nav-logo">
+          <img alt="logo" height="60px" width="60px" src="/images/logo_v2.png"/>
+        </a>
+        <input id="navBtn" type="checkbox"/>
+        <div class="nav-menu">
+          
+            
+              <a class="nav-menu-item" href="/base">Eduation</a>
+            
+              <a class="nav-menu-item" href="/feat">Research & Project</a>
+            
+              <a class="nav-menu-item" href="/Exp">Experience</a>
+            
+          
+          
+        </div>
+        <label class="nav-btn" for="navBtn"></label>
+      </div>
+    </div>
+    <div class="body">
+      
+  <article class="post-content">
+    <div class="post-inner">
+      <div class="post-content__head">
+        <div class="post-title">Research the Dynamic Correlation between Gold Futures and Spot Price under COVID-19</div>
+        <div class="post-info">
+          
+  <a href="/tags/Project/" class="post-tag">#Project</a>
+
+
+          <span class="post-date">2020-09-22</span>
+        </div>
+      </div>
+      
+      <div class="post-content__body">
+        
+          <div class="post-gallery">
+            
+          </div>
+        
+        <p>Advisor: Assistant Professor Liu Baoseng (ZAFU)<br>09&#x2F;2020 – 02&#x2F;2021</p>
+<p><strong>Introduction and Objectives</strong></p>
+<p>This project as part of a financial engineering practical training course, was a collaborative effort involving myself and two team members. The primary objective was to empirically examine the correlation between gold futures and spot prices during the COVID-19 pandemic. Aimed to compare the performance of these assets during this unique period with unaffected gold futures and spot markets. The analysis sought to determine whether gold still maintained its value and risk-avoidance properties during the pandemic and explored the feasibility of cross-market arbitrage between gold futures and spot markets. Additionally, the project involved empirical analysis of volatility interdependence between gold futures and spot markets using the DCC-GARCH model in R. It also included portfolio trend forecasting based on 1% and 2.5% VaR by using GARCH-Copula CVaR approach.</p>
+<span id="more"></span>
+
+<p><strong>Responsibilities</strong></p>
+<p>In my role as the team leader, I was responsible for within team communication and reporting progress to the professor. I collaborated with team members to select the research topic and held regular meetings. My duties included modeling and model testing, where we experimented with various related models to determine the most effective one. We collectively discussed and made improvements to the model. Afterward, I distributed the analysis results to team members and explained the findings. We worked together to complete the initial draft of the paper and communicated with the professor for further enhancements.</p>
+<p><strong>Data Selection and Preprocessing</strong></p>
+<p>For the sample study, we selected daily trading price data for the main gold futures contract on the Shanghai Futures Exchange and the closing price of spot gold (Au9999) on the Shanghai Gold Exchange. The sample period covered January 1, 2019, to May 26, 2020. We conducted data cleaning and then performed descriptive statistics.</p>
+<p><img src="/2020/09/22/Proj02/Prj0201.jpg"></p>
+<p><strong>Statistical Testing and Causality Analysis</strong></p>
+<p>We initiated the analysis by conducting Augmented Dickey-Fuller (ADF) tests and cointegration tests to assess data stationarity and Granger causality tests to explore the causal relationship between gold futures and spot gold returns. The results revealed that spot prices Granger-cause futures prices, indicating that spot gold prices have a certain guiding effect on futures prices.</p>
+<p><strong>Impact Analysis and Variance Decomposition</strong></p>
+<p>In the next phase, we processed the returns of both gold futures and spot prices, introducing a shock to analyze their different responses during various time periods. We then conducted a variance decomposition for the returns of both gold futures and spot prices to assess the contribution of each variable to the changes in the two markets. The following visual representation illustrates our findings:</p>
+<p>· The left chart reveals that spot gold has a consistent and stable influence on the volatility of the gold futures market. The contribution of spot gold to market volatility tends to stabilize at approximately 50%.<br>· The right chart demonstrates that the spot gold market has been increasingly influenced by gold futures over time.</p>
+<p><img src="/2020/09/22/Proj02/Prj0202.png" alt="Variance Decomposition Chart: Spot Gold (Gray), Futures (Black)"></p>
+<p><strong>DCC-GARCH Modeling and Dynamic Correlation</strong></p>
+<p>After conducting the ARCH effect tests, we established a DCC-GARCH model for the gold futures and spot returns. We first determined the model orders. Based on the autocorrelation and partial autocorrelation plots of the squared residual series, we selected an order of (1,1) for the model.</p>
+<p><img src="/2020/09/22/Proj02/Prj0203.png"></p>
+<p>Dynamic correlation coefficient graphs revealed a consistent positive correlation between gold futures and spot markets, indicating a sustained positive relationship. The correlation coefficient fluctuated around 0.95, signifying a high degree of correlation. During the first half of 2019, the dynamic correlation coefficient experienced three noticeable drops, reaching 0.85, 0.87, and 0.8, followed by rapid returns to the mean. The second half of 2019 saw a relatively stable dynamic correlation coefficient, and around January 2020, a significant drop in the correlation coefficient occurred, followed by a sharp rebound. During this time, external factors negatively affected trading in the gold futures and spot markets, leading to a drastic decrease in the dynamic correlation. Nevertheless, the dynamic correlation remained above 0.5, indicating that there was still a substantial degree of interaction between the two markets. In summary, the gold futures and spot markets exhibited a highly positive and sustained correlation, even during turbulent periods.</p>
+<p><img src="/2020/09/22/Proj02/Prj0204.png"></p>
+<p><strong>Appendix</strong><br>GARCH-Copula CVaR Approach</p>
+<p><img src="/2020/09/22/Proj02/Prj0205.png"><br><img src="/2020/09/22/Proj02/Prj0206.png"><br><img src="/2020/09/22/Proj02/Prj0207.png"><br><img src="/2020/09/22/Proj02/Prj0208.png"><br><img src="/2020/09/22/Proj02/Prj0209.png"></p>
+
+      </div>
+    </div>
+  </article>
+  <div class="post__foot">
+    
+    <div class="post-nav">
+  
+    <a class="post-nav-item-left" href="/2020/12/01/Re03/">
+      <div class="text-align">
+        <svg t="1670570876164"
+             class="icon"
+             viewBox="0 0 1024 1024"
+             width="16"
+             height="16">
+          <path d="M384 512L731.733333 202.666667c17.066667-14.933333 19.2-42.666667 4.266667-59.733334-14.933333-17.066667-42.666667-19.2-59.733333-4.266666l-384 341.333333c-10.666667 8.533333-14.933333 19.2-14.933334 32s4.266667 23.466667 14.933334 32l384 341.333333c8.533333 6.4 19.2 10.666667 27.733333 10.666667 12.8 0 23.466667-4.266667 32-14.933333 14.933333-17.066667 14.933333-44.8-4.266667-59.733334L384 512z" p-id="14596"/>
+        </svg>
+        <span class="text-small">Previous</span>
+      </div>
+      <div>Research on Credit Risk of Listed Companies Based on GRBF and KMV Model</div>
+    </a>
+  
+  <div class="vhr"></div>
+  
+    <a class="post-nav-item-right" href="/2020/06/29/WE04/">
+      <div class="text-align">
+        <span class="text-small">Next</span>
+        <svg t="1670570876164"
+             class="icon"
+             viewBox="0 0 1024 1024"
+             transform="scale(-1,-1)"
+             width="16"
+             height="16">
+          <path d="M384 512L731.733333 202.666667c17.066667-14.933333 19.2-42.666667 4.266667-59.733334-14.933333-17.066667-42.666667-19.2-59.733333-4.266666l-384 341.333333c-10.666667 8.533333-14.933333 19.2-14.933334 32s4.266667 23.466667 14.933334 32l384 341.333333c8.533333 6.4 19.2 10.666667 27.733333 10.666667 12.8 0 23.466667-4.266667 32-14.933333 14.933333-17.066667 14.933333-44.8-4.266667-59.733334L384 512z" p-id="14596"/>
+        </svg>
+      </div>
+      Quantitative Analyst Intern
+    </a>
+  
+</div>
+
+    
+      <div class="related-post">
+  <div class="related__head">
+  <a href="/tags/Project/" class="post-tag">#Project</a>
+
+</div>
+  <div class="realated__body">
+    
+      <div class="null"><div class="null-item"><div class="null-title"><a href="/2019/09/07/Project01/" title="Quantitative Analysis of the Carbon Finance market in China" rel="bookmark">Quantitative Analysis of the Carbon Finance market in China</a></div></div><div class="null-item"><div class="null-title"><a href="/2021/11/01/Project03/" title="Performance Analysis of Six Trading Strategies in the Chip Industry" rel="bookmark">Performance Analysis of Six Trading Strategies in the Chip Industry</a></div></div><div class="null-item"><div class="null-title"><a href="/2022/07/23/Project04/" title="The Valuation of CME Group Inc." rel="bookmark">The Valuation of CME Group Inc.</a></div></div><div class="null-item"><div class="null-title"><a href="/2018/11/12/Re011/" title="The Impact of Index Investing on the Price of Agricultural Commodities Based on MIDAS" rel="bookmark">The Impact of Index Investing on the Price of Agricultural Commodities Based on MIDAS</a></div></div><div class="null-item"><div class="null-title"><a href="/2019/01/01/Re02/" title="International agricultural product price risk difference under the Sino-US trade friction (Published)" rel="bookmark">International agricultural product price risk difference under the Sino-US trade friction (Published)</a></div></div></div>
+    
+  </div>
+</div>
+
+    
+    
+  </div>
+
+    </div>
+    <div class="foot">
+      <div class="foot-inner">
+        <div class="foot__head">
+          
+            <div class="foot-line">
+                <div class="text">Life is what you make of it.</div>
+            </div>
+          
+        </div>
+        <div class="foot__body">
+          
+          
+            <div class="foot-item">
+              <div class="foot-item__head">Social Accounts</div>
+              <div class="foot-item__body">
+                
+                  <div class="text">
+                    <img alt="link" height="20px" width="20px" src="/images/logo-github.svg"/>
+                    <a class="foot-link" target="_blank" rel="noopener" href="https://github.com/Megaxx07">Megaxx07</a>
+                  </div>
+                
+                  <div class="text">
+                    <img alt="link" height="20px" width="20px" src="/images/logo-linkedin.svg"/>
+                    <a class="foot-link" target="_blank" rel="noopener" href="https://www.linkedin.com/in/xinlu-xu-958934223/">LinkedIn</a>
+                  </div>
+                
+              </div>
+            </div>
+          
+          <div class="foot-item">
+            <div class="foot-item__head">Contact</div>
+            <div class="foot-item__body">
+              <div class="text">
+                <img alt="link" height="20px" width="20px" src="/images/icon/icon-email.svg"/>
+                <a class="foot-link" href="mailto:xx2208@nyu.edu">xx2208@nyu.edu</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="copyright">
+          <a href="http://example.com">MEGAXX</a> &nbsp; | Driven By&nbsp;<a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>&nbspand&nbsp;
+          <svg width="20" height="20" viewBox="0 0 725 725">
+            <path fill-rule="evenodd" fill="rgb(221, 221, 221)" d="M145.870,236.632 L396.955,103.578 L431.292,419.44 L156.600,522.53 L145.870,236.632 Z"/>
+            <path fill-rule="evenodd" fill="rgb(159, 159, 159)" d="M396.955,103.578 L564.345,234.486 L611.558,513.469 L431.292,419.44 L396.955,103.578 Z"/>
+            <path fill-rule="evenodd" fill="rgb(0, 0, 0)" d="M431.292,419.44 L611.558,513.469 L358.327,595.18 L156.600,522.53 L431.292,419.44 Z"/>
+          </svg>
+          <a target="_blank" rel="noopener" href="https://github.com/hooozen/hexo-theme-tranquility">hoozen</a>&nbsp;
+        </div>
+      </div>
+    </div>
+    
+    
+  
+
+  </body>
+</html>

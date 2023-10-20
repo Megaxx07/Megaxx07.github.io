@@ -5,7 +5,7 @@
     <meta name="viewport" content="initial-scale=1.0, width=device-width"/>
     <title>
       
-        Research the Dynamic Correlation between Gold Futures and Spot Price under COVID-19 | MEGAXX
+        Research on Credit Risk of Listed Companies Based on GRBF and KMV Model | MEGAXX
       
     </title>
     <meta name="description" content="This themes forked from hoozen and other elements built by myself"/>
@@ -70,13 +70,13 @@
   <article class="post-content">
     <div class="post-inner">
       <div class="post-content__head">
-        <div class="post-title">Research the Dynamic Correlation between Gold Futures and Spot Price under COVID-19</div>
+        <div class="post-title">Research on Credit Risk of Listed Companies Based on GRBF and KMV Model</div>
         <div class="post-info">
           
-  <a href="/tags/Project/" class="post-tag">#Project</a>
+  <a href="/tags/Research/" class="post-tag">#Research</a>
 
 
-          <span class="post-date">2020-09-22</span>
+          <span class="post-date">2020-12-01</span>
         </div>
       </div>
       
@@ -86,7 +86,23 @@
             
           </div>
         
-        <p>Advisor: Adjunct Professor Liu Baoseng (ZAFU)<br>09&#x2F;2020 – 02&#x2F;2021<br>• Used the Granger causality test for the causal relationship between the gold futures price and gold spot price. VECM is used for adding an impact to analyze the different performances of the returns in different periods.<br>• Time series analysis was used to describe two prices data. The variance decomposition of the return rate of two prices is carried out to analyze the contribution rate of each variable to the changes in the two markets.<br>• Finally, the DCC-GARCH model was established based on the residual regression equation of the gold period spot return series to study the dynamic correlation between them.<br>• The results are two data series do have a high correlation during the whole analysis period, and especially in COVID-19, there is a big difference between the two prices, which could be used to make profits.</p>
+        <p>Advisor: Professor Gu Guangtong (ZAFU)<br>12&#x2F;2020 – 06&#x2F;2021</p>
+<p><strong>Motivation and Objectives</strong><br>Initially, my motivation for exploring this combined model was to effectively evaluate a company’s risk of default and to filter through numerous stocks for portfolio construction. This stemmed from my active involvement in the Chinese stock market and a deep interest in automated processes. Prolonged monitoring of the market can lead to inaccurate judgments, therefore, I aspired to introduce a neural network model to provide rational analysis and guidance for assessing a company’s risk of default.</p>
+<span id="more"></span>
+
+<p><strong>Project Initiation</strong><br>Completed this project independently. Furthermore, the integration of neural networks and risk assessment models with the KMV model in this project is an area that few have ventured into from 2020 to 2021.</p>
+<p><strong>Model Composition</strong><br>Utilized a combination model consisting of the Generalized Radial Basis Function Neural Network (GRBFNN) and the credit risk evaluation model KMV. Its primary objective was to assess the credit default risk of 50 publicly listed companies in the Chinese stock market and recommend modeling enhancement.</p>
+<p><strong>Data Collection and Preparation</strong><br>In the context of the Chinese stock market, randomly selected 50 publicly listed companies from each rating level. Obtained their 2020 annual financial report as well as stock price data from April 2020 to March 2021. Subsequently, data cleaning was conducted, and the dataset was divided into a training set and a test set with a ratio of 1:4.</p>
+<p><strong>Future Selection</strong><br>Ten essential financial indicators were selected from 36 basic financial metrics using a factor analysis model, and their factor scores were computed. After analyzing scree plots and variance explained by the factors, the number of common factors explanatory variables was determined to be two.</p>
+<p><img src="/2020/12/01/Re03/R0301.png"></p>
+<p>Factor loading matrices were then calculated, and principal component analysis (PCA) was applied to identify two primary factors: one related to solvency and the other to profitability.</p>
+<p><img src="/2020/12/01/Re03/R0302.png"></p>
+<p><strong>Model Fine-Tuning</strong><br>In the modeling phase, fine-tuned the GRBFNN model, adjusting the number of hidden layers, input layers, and output layers. The test set data was input to the model for debugging, and model performance was assessed using loss functions and difference surface plots to detect signs of overfitting or under-fitting. Subsequently, the training set data was fed into the GRBFNN model, with input layers including common factors and factor scores, and output layers encompassing asset value and volatility.</p>
+<p><img src="/2020/12/01/Re03/R0303.png"></p>
+<p><img src="/2020/12/01/Re03/R0304.png"></p>
+<p><strong>Performance Evaluation</strong><br>Finally, the KMV model to compute default probabilities and default distances for all publicly listed companies in the training set, which were then compared with market-released credit ratings. The average accuracy of the test set reached 74.46%. It is noteworthy that companies with higher credit ratings exhibited relatively lower accuracy.</p>
+<p><img src="/2020/12/01/Re03/R0305.jpg"></p>
+<p><strong>Conclusion</strong><br>In conclusion, this independently executed combined model can reasonably assess the risk of default for publicly listed companies. Given that this model was developed when neural network models were not widely popular, it still holds considerable potential for further advancement.</p>
 
       </div>
     </div>
@@ -111,7 +127,7 @@
   
   <div class="vhr"></div>
   
-    <a class="post-nav-item-right" href="/2020/09/10/Re03/">
+    <a class="post-nav-item-right" href="/2020/09/22/Proj02/">
       <div class="text-align">
         <span class="text-small">Next</span>
         <svg t="1670570876164"
@@ -123,7 +139,7 @@
           <path d="M384 512L731.733333 202.666667c17.066667-14.933333 19.2-42.666667 4.266667-59.733334-14.933333-17.066667-42.666667-19.2-59.733333-4.266666l-384 341.333333c-10.666667 8.533333-14.933333 19.2-14.933334 32s4.266667 23.466667 14.933334 32l384 341.333333c8.533333 6.4 19.2 10.666667 27.733333 10.666667 12.8 0 23.466667-4.266667 32-14.933333 14.933333-17.066667 14.933333-44.8-4.266667-59.733334L384 512z" p-id="14596"/>
         </svg>
       </div>
-      Research on Credit Risk of Listed Companies Based on GRBF and KMV Model
+      Research the Dynamic Correlation between Gold Futures and Spot Price under COVID-19
     </a>
   
 </div>
@@ -131,12 +147,12 @@
     
       <div class="related-post">
   <div class="related__head">
-  <a href="/tags/Project/" class="post-tag">#Project</a>
+  <a href="/tags/Research/" class="post-tag">#Research</a>
 
 </div>
   <div class="realated__body">
     
-      <div class="null"><div class="null-item"><div class="null-title"><a href="/2019/09/07/Project01/" title="Quantitative Analysis of the Carbon Finance market in China" rel="bookmark">Quantitative Analysis of the Carbon Finance market in China</a></div></div><div class="null-item"><div class="null-title"><a href="/2021/11/01/Project03/" title="Performance Analysis of Six Trading Strategies in the Chip Industry" rel="bookmark">Performance Analysis of Six Trading Strategies in the Chip Industry</a></div></div><div class="null-item"><div class="null-title"><a href="/2022/07/23/Project04/" title="The Valuation of CME Group Inc." rel="bookmark">The Valuation of CME Group Inc.</a></div></div><div class="null-item"><div class="null-title"><a href="/2019/01/01/Re02/" title="International agricultural product price risk difference under the Sino-US trade friction (Published)" rel="bookmark">International agricultural product price risk difference under the Sino-US trade friction (Published)</a></div></div><div class="null-item"><div class="null-title"><a href="/2018/11/12/Re011/" title="The Impact of Index Investing on the Price of Agricultural Commodities Based on MIDAS" rel="bookmark">The Impact of Index Investing on the Price of Agricultural Commodities Based on MIDAS</a></div></div></div>
+      <div class="null"><div class="null-item"><div class="null-title"><a href="/2019/01/01/Re02/" title="International agricultural product price risk difference under the Sino-US trade friction (Published)" rel="bookmark">International agricultural product price risk difference under the Sino-US trade friction (Published)</a></div></div><div class="null-item"><div class="null-title"><a href="/2022/02/14/Re04/" title="Assessing Seismic Risk and Financial Distress in the Bay Area Hospital System" rel="bookmark">Assessing Seismic Risk and Financial Distress in the Bay Area Hospital System</a></div></div><div class="null-item"><div class="null-title"><a href="/2018/09/12/Re01/" title="The Impact of Index Investing on the Price of Agricultural Commodities (Published)" rel="bookmark">The Impact of Index Investing on the Price of Agricultural Commodities (Published)</a></div></div><div class="null-item"><div class="null-title"><a href="/2020/09/22/Proj02/" title="Research the Dynamic Correlation between Gold Futures and Spot Price under COVID-19" rel="bookmark">Research the Dynamic Correlation between Gold Futures and Spot Price under COVID-19</a></div></div><div class="null-item"><div class="null-title"><a href="/2019/09/07/Project01/" title="Quantitative Analysis of the Carbon Finance market in China" rel="bookmark">Quantitative Analysis of the Carbon Finance market in China</a></div></div></div>
     
   </div>
 </div>
